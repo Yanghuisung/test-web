@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>양희성 | 개인 소개</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f8fa;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                   "Malgun Gothic", "맑은 고딕", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    header.hero {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 600;
+      flex-shrink: 0;
+      letter-spacing: -1px;
+    }
+
+    .hero-text h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-text p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    section h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+
+    .about p {
+      font-size: 16px;
+      color: var(--text);
+      margin: 0 0 12px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 16px;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .meta dt {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .meta dd {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .chip:hover {
+      transform: translateY(-1px);
+      background: #dbeafe;
+    }
+
+    .skill-group {
+      margin-top: 20px;
+    }
+
+    .skill-group + .skill-group {
+      margin-top: 24px;
+    }
+
+    .skill-group h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0 0 12px;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .container { padding: 56px 20px 80px; }
+      header.hero { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .hero-text h1 { font-size: 26px; }
+      .meta { grid-template-columns: 1fr; gap: 2px 0; }
+      .meta dt { margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="avatar">양</div>
+      <div class="hero-text">
+        <h1>양희성</h1>
+        <p>전력계통 해석 및 운영 솔루션 개발자 · AI Model Fine-tuning</p>
+      </div>
+    </header>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        한전KDN 전력ICT연구원 발송전ICT그룹에서 전력계통 해석 및 운영 솔루션 개발 업무를 수행하고 있습니다.
+        다양한 언어와 기술을 활용한 소프트웨어 개발과 AI 모델 파인튜닝까지 폭넓은 영역에서 일하고 있습니다.
+      </p>
+      <dl class="meta">
+        <dt>소속</dt>
+        <dd>한전KDN 전력ICT연구원</dd>
+        <dt>그룹</dt>
+        <dd>발송전ICT그룹</dd>
+        <dt>업무</dt>
+        <dd>전력계통 해석 및 운영 솔루션 개발</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="skills">
+          <span class="chip">C</span>
+          <span class="chip">C++</span>
+          <span class="chip">Java</span>
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>AI / ML</h3>
+        <div class="skills">
+          <span class="chip">AI Model Fine-tuning</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Domain</h3>
+        <div class="skills">
+          <span class="chip">전력계통 해석</span>
+          <span class="chip">전력 운영 솔루션</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 양희성
+    </footer>
+  </div>
+</body>
+</html>
